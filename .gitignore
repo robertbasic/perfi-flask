@@ -1,0 +1,9 @@
+*.log
+*.pyc
+*.pyo
+*.sqliteo
+
+bin
+lib
+lib64
+include
