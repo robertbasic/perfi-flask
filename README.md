@@ -11,8 +11,9 @@ Intented to be run as a WSGI application under Apache.
 
     cd /var/www
     git clone git://github.com/robertbasic/perfi.git perfi
-    virtualenv perfi
     cd perfi
+    virtualenv venv
+    source venv/bin/activate
     pip install flask
 
 Apache needs to have enabled the WSGI module. Make sure the
