@@ -25,9 +25,9 @@ Example vhost directive:
 
         ServerName perfi.local
         WSGIDaemonProcess perfi user=apache group=apache threads=5
-        WSGIScriptAlias / /var/www/perfi.local/perfi.wsgi
+        WSGIScriptAlias / /var/www/perfi/perfi.wsgi
 
-        <Directory /var/www/perfi.local>
+        <Directory /var/www/perfi>
             WSGIScriptReloading On
             WSGIProcessGroup perfi
             WSGIApplicationGroup %{GLOBAL}
