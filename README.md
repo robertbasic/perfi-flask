@@ -16,6 +16,16 @@ Intented to be run as a WSGI application under Apache.
     source venv/bin/activate
     pip install flask
 
+App config
+++++++++++
+
+    cp appconfig.py.dist appconfig.py
+
+And edit accordingly.
+
+Apache
+++++++
+
 Apache needs to have enabled the WSGI module. Make sure the
 `WSGISocketPrefix` path is set correctly in `wsgi.conf`.
 

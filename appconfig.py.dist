@@ -1,0 +1,2 @@
+# True for development environment
+DEBUG = False 

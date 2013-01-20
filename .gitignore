@@ -1,3 +1,5 @@
+appconfig.py
+
 *.log
 *.pyc
 *.pyo
