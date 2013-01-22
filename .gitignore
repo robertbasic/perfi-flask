@@ -3,7 +3,7 @@ appconfig.py
 *.log
 *.pyc
 *.pyo
-*.sqliteo
+*.sqlite
 
 bin
 lib
