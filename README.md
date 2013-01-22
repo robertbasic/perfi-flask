@@ -23,6 +23,11 @@ App config
 
 And edit accordingly.
 
+Database
+--------
+
+    cp perfi.sqlite.init perfi.sqlite
+
 Apache
 ------
 
