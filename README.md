@@ -14,7 +14,8 @@ Intented to be run as a WSGI application under Apache.
     cd perfi
     virtualenv venv
     source venv/bin/activate
-    pip install flask
+
+Make sure to [pip install the dependencies!](#dependencies)
 
 App config
 ----------
@@ -61,7 +62,11 @@ Example vhost directive:
 
     </VirtualHost>
 
-Dependencies
+Dependencies<a id="dependencies"/>
 ============
 
  * flask
+ * SQLAlchemy==0.8.0b2
+ * WTForms==1.0.2
+ * Flask-SQLAlchemy==0.16
+ * Flask-Wtf==0.5
