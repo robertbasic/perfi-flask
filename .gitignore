@@ -5,6 +5,7 @@ appconfig.py
 *.pyo
 *.sqlite
 
+build
 bin
 lib
 lib64
