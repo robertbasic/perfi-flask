@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=utf-8" >
+        <title>perFi{% if self.page_title() %} &mdash; {% endif %}{%block page_title %}{% endblock %}</title>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+
+        <script src="{{ url_for('static', filename='js/jquery-1.9.0.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+
+        <script>
+            $(function(){
+                var path = window.location.pathname;
+                $("ul.nav a[href='"+path+"']").parent().addClass("active");
+            });
+        </script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="brand" href="/">perFi</a>
+
+                    {% if session.get('logged_in') %}
+                    <div class="btn-group pull-right">
+                        <a class="btn" href="/logout">
+                            <i class="icon-off"></i> Log out
+                        </a>
+                    </div>
+
+                        <ul class='nav'>
+                            <li>
+                                <a href='{{ url_for("index") }}'><i class='icon-home'></i> dashboard</a>
+                            </li>
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class='alert'>
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+            {% endif %}
+        {% endwith %}
+
+
+        <div class='container-fluid'>
+            <div class='row-fluid'>
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
