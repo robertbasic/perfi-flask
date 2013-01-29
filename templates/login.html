@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+{% from "forms/inputs.html" import render_form_input %}
+{% from "forms/inputs.html" import render_form_actions %}
+<div class='span6'>
+    <h3>Log in</h3>
+
+    <div class='row-fluid'>
+        <form class='form-horizontal' method='POST'>
+            {{ render_form_input(form.email) }}
+            {{ render_form_input(form.password) }}
+
+            {{ render_form_actions("Login") }}
+        </form>
+    </div>
+
+</div>
+{% endblock %}

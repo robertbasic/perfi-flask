@@ -1,0 +1,28 @@
+{% macro render_form_input(field) %}
+    <div class='control-group'>
+        {{ field.label(class='control-label') }}
+        <div class='controls'>
+            {{ field }}
+
+            {% if field.errors %}
+                <div class='help-block'>
+                    {% for error in field.errors %}
+                    <span class='help-inline'>
+                        {{ error }}
+                    </span>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro render_form_hidden(field) %}
+{{ field }}
+{% endmacro %}
+
+{% macro render_form_actions(submit) %}
+    <div class='form-actions'>
+        <input type='submit' id='submit' class='btn btn-primary' value='{{ submit }}'>
+    </div>
+{% endmacro %}

@@ -1,2 +1,4 @@
 # True for development environment
 DEBUG = False 
+
+SESSION_SECRET_KEY = "Set this to something very secret, I guess"
