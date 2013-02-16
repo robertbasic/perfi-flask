@@ -45,7 +45,10 @@ def logout():
     return redirect(url_for('login'))
 
 
-if __name__ == "__main__":
+def setup(app):
     app.debug = appconfig.DEBUG
     app.secret_key = appconfig.SESSION_SECRET_KEY
+
+if __name__ == "__main__":
     app.run()
+    setup(app)

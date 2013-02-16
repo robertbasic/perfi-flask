@@ -8,9 +8,6 @@ activate_this = os.path.join(PROJECT_DIR, 'venv/bin', 'activate_this.py')
 execfile(activate_this, dict(__file__=activate_this))
 sys.path.append(PROJECT_DIR)
 
-from perfi import app as application
-import appconfig
+from perfi import setup,app as application
 
-# Set application configuration directives
-application.debug = appconfig.DEBUG
-application.secret_key = appconfig.SESSION_SECRET_KEY
+setup(application)
