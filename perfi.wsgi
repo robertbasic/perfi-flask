@@ -1,4 +1,6 @@
-import os,sys
+import os,sys,logging
+
+logging.basicConfig(stream=sys.stderr)
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
